@@ -3,7 +3,7 @@ import Cookie from "universal-cookie";
 import { Axios } from "../../Api/Axios";
 import { USER } from "../../Api/Apis";
 import { Navigate, Outlet, useNavigate } from "react-router-dom";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import Err403 from "./Error/Err403";
 
 export default function RequireAuth({ allowedRole }) {

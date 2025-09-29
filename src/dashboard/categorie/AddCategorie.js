@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { CATEGORY } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Axios } from "../../Api/Axios";
 
 export default function AddCategorie() {

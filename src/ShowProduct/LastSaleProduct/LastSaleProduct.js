@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { LATESTSALE } from "../../Api/Apis";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Axios } from "../../Api/Axios";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";

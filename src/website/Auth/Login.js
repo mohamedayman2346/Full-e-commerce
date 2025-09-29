@@ -8,7 +8,7 @@ import Cookie from "universal-cookie";
 import "../../components/CSS/alert.css";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 
 export default function Login() {
   // page widht

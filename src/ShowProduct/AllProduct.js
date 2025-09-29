@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import LoadingPage from "../components/Loading/loading";
+import LoadingPage from "../components/LoadingFolder/loading";
 import { Axios } from "../Api/Axios";
 import { PRODUCTS } from "../Api/Apis";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

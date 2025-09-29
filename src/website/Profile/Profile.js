@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { baseURL, USER } from "../../Api/Apis";
 import { Axios } from "../../Api/Axios";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Form from "react-bootstrap/Form";

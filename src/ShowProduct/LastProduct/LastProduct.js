@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { LATEST } from "../../Api/Apis";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Axios } from "../../Api/Axios";
 import ShowLastProduct from "./ShowLastProduct";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";

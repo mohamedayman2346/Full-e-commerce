@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { TOPRATED } from "../Api/Apis";
 import ShowTopRated from "./TopRated/ShowTopRated";
 import { Axios } from "../Api/Axios";
-import LoadingPage from "../components/Loading/loading";
+import LoadingPage from "../components/LoadingFolder/loading";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 

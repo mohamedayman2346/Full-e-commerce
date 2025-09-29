@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CATEGORIE, PRODUCTS, USER, USERS } from "../Api/Apis";
 import { Axios } from "../Api/Axios";
-import LoadingPage from "../components/Loading/loading";
+import LoadingPage from "../components/LoadingFolder/loading";
 
 export default function DashboardPage() {
   const [users, setUsers] = useState([]);

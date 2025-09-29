@@ -1,5 +1,5 @@
 import { Container, Form } from "react-bootstrap";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { useContext, useEffect, useState } from "react";
 import Delivery from "./Delevery";
 import { NavLink } from "react-router-dom";
@@ -9,7 +9,7 @@ import Bank from "./Bank";
 export default function Checkout() {
   const [loading, setLoading] = useState(false);
   const [product, setProduct] = useState([]);
-  const [pageShow, setPageShow] = useState('delevery')
+  const [pageShow, setPageShow] = useState("delevery");
   let total = 0;
   const { isChanger } = useContext(cart);
   //   get product data
@@ -64,10 +64,10 @@ export default function Checkout() {
         </div>
 
         <div className="row">
-            {/* form */}
+          {/* form */}
           <div className="col-md-6 col-12">
             <h1>Billing Details</h1>
-            {pageShow === 'bank' ? <Bank />   : <Delivery />}
+            {pageShow === "bank" ? <Bank /> : <Delivery />}
           </div>
           {/* buy  */}
           <div className="col-md-5 col-12">
@@ -95,14 +95,14 @@ export default function Checkout() {
               </div>
             </div>
             {/* buy method */}
-                  {/* page Show */}
+            {/* page Show */}
             <div className="p-5 pt-2">
               <div className="mb-1 d-flex gap-3">
                 <Form.Check // prettier-ignore
                   type="radio"
                   name="group1"
                   id="bank"
-                  onChange={() => setPageShow('bank')}
+                  onChange={() => setPageShow("bank")}
                 />
                 <Form.Label htmlFor="bank">Bank</Form.Label>
               </div>
@@ -111,9 +111,9 @@ export default function Checkout() {
                   type="radio"
                   name="group1"
                   id="dele"
-                  onChange={() => setPageShow('delevery')}
+                  onChange={() => setPageShow("delevery")}
                 />
-                <Form.Label htmlFor="dele" >Cash On Delevery</Form.Label>
+                <Form.Label htmlFor="dele">Cash On Delevery</Form.Label>
               </div>
             </div>
             {/* coupon */}
@@ -135,7 +135,9 @@ export default function Checkout() {
             </div>
             {/* submit */}
             <div className="p-5 pt-2">
-            <button type='submit' className="btn btn-danger ">Place Order</button>
+              <button type="submit" className="btn btn-danger ">
+                Place Order
+              </button>
             </div>
           </div>
         </div>

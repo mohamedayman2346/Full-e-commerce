@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Container, Form } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { cart } from "../../Context/IsChanger";

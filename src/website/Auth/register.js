@@ -9,7 +9,7 @@ import "../../components/CSS/alert.css";
 import "../../components/CSS/Google.css";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 
 export default function Register() {
   // page widht

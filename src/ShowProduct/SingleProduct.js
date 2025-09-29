@@ -3,7 +3,7 @@ import { Container, Form } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { Axios } from "../Api/Axios";
 import { CART, PRODUCT } from "../Api/Apis";
-import LoadingPage from "../components/Loading/loading";
+import LoadingPage from "../components/LoadingFolder/loading";
 import ImageGallery from "react-image-gallery";
 import {
   faHeart,

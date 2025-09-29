@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CATEGORIE } from "../../Api/Apis";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Axios } from "../../Api/Axios";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

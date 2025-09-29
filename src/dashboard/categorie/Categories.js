@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TableShow from "../../components/table/Table";
 import { CATEGORIE, CATEGORY } from "../../Api/Apis";
 import { Axios } from "../../Api/Axios";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Link } from "react-router-dom";
 
 export default function Categories() {

@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import LoadingPage from "../../components/Loading/loading";
+import LoadingPage from "../../components/LoadingFolder/loading";
 import { Best } from "../../Context/BestChange";
 import { Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
