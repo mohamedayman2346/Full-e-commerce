@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { WindowSizeContext } from "../../Context/WindowSize";
 import Form from "react-bootstrap/Form";
 import { NavLink } from "react-router-dom";
-import { baseURL, REGISTER } from "../../Api/Api";
+import { baseURL, REGISTER } from "../../Api/Apis";
 import axios from "axios";
 import Cookie from "universal-cookie";
 import "../../components/CSS/alert.css";

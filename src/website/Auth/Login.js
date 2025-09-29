@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { WindowSizeContext } from "../../Context/WindowSize";
 import Form from "react-bootstrap/Form";
 import { NavLink } from "react-router-dom";
-import { baseURL, LOGIN } from "../../Api/Api";
+import { baseURL, LOGIN } from "../../Api/Apis";
 import axios from "axios";
 import Cookie from "universal-cookie";
 import "../../components/CSS/alert.css";
@@ -28,7 +28,7 @@ export default function Login() {
     }, 1000);
   }, []);
 
-    //handle show
+  //handle show
   function handleShow() {
     setShow((e) => !e);
     if (passwordShow === "password") setPasswordShow("text");
@@ -62,7 +62,8 @@ export default function Login() {
       let token = res.data.token;
       cookie.set("ecommerce", token);
       let role = res.data.user.role;
-      window.location.pathname = role === "1995" ? "/dashboard/dashboardPage" : "/";
+      window.location.pathname =
+        role === "1995" ? "/dashboard/dashboardPage" : "/";
     } catch (err) {
       if (err.status === 401) setError("email or password is wrong");
       else setError("there is an error, please try again later");
@@ -70,7 +71,6 @@ export default function Login() {
       setLoading(false);
     }
   }
-
 
   return (
     <>
@@ -86,7 +86,6 @@ export default function Login() {
               src={require("../../Access/images/Auth.png")}
               alt="login"
               style={{ maxWidth: width > 1200 ? "700px" : "500px" }}
-
             />
           </div>
         )}

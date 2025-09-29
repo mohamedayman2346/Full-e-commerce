@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { WindowSizeContext } from "../../Context/WindowSize";
 import Form from "react-bootstrap/Form";
-import { baseURL} from "../../Api/Api";
+import { baseURL } from "../../Api/Apis";
 import axios from "axios";
 import "../../components/CSS/alert.css";
 import "../../components/CSS/Google.css";
@@ -9,7 +9,7 @@ import "../../components/CSS/Google.css";
 export default function Delivery() {
   // page widht
   const { width } = useContext(WindowSizeContext);
- 
+
   // focus
   const focus = useRef("");
   // handel foucs
@@ -35,27 +35,24 @@ export default function Delivery() {
 
   //handle send form
   async function handleSubmit(e) {
-   
     e.preventDefault();
     // send the form data to the server
     try {
-       await axios.post(`${baseURL}/${""}`, form);
+      await axios.post(`${baseURL}/${""}`, form);
     } catch (err) {
       console.log(err);
-    } 
+    }
   }
 
   console.log(form);
 
   return (
     <>
-      
       <div
         className="d-flex px-5 py-5 align-items-start flex-wrap"
         style={{ justifyContent: width > 900 ? "space-around" : "center" }}
       >
         <div className="me-5">
-
           <Form className="auth-form my-5" onSubmit={handleSubmit}>
             <Form.Group
               className="position-relative"

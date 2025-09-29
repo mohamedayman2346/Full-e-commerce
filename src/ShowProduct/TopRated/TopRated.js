@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TOPRATED } from "../../Api/Api";
+import { TOPRATED } from "../../Api/Apis";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
@@ -12,17 +12,16 @@ import ShowTopRated from "./ShowTopRated";
 export default function TopRated() {
   const [products, setPtoducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [limit, setLimit] = useState(6)
+  const [limit, setLimit] = useState(6);
 
   useEffect(() => {
     Axios.get(`${TOPRATED}?limit=${limit}`)
       .then((res) => {
-        console.log((res.data.length = 6 ),
-        setPtoducts(res.data)
-    )}) 
-      .finally(() => setLoading(false))
+        console.log((res.data.length = 6), setPtoducts(res.data));
+      })
+      .finally(() => setLoading(false));
   }, []);
-  
+
   const showProduct = products.map((product) => (
     <ShowTopRated
       title={product.title}
@@ -44,7 +43,7 @@ export default function TopRated() {
         <h5 className="section-title text-danger">Our Product</h5>
         <div className="d-flex flex-wrap justify-content-between align-items-center mb-4">
           <h1>Explore Our Products</h1>
-          <DateShow position = 'upper' />
+          <DateShow position="upper" />
           <div className="arrow d-flex gap-2">
             <FontAwesomeIcon
               icon={faArrowLeft}
@@ -60,7 +59,10 @@ export default function TopRated() {
             />
           </div>
         </div>
-        <div className="d-flex flex-wrap justify-content-start align-items-center last " style = {{overflowX: "hidden"}} >
+        <div
+          className="d-flex flex-wrap justify-content-start align-items-center last "
+          style={{ overflowX: "hidden" }}
+        >
           {showProduct}
         </div>
         <div className="buttom mt-5 d-flex align-items-center justify-content-center">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CATEGORIE } from "../../Api/Api";
+import { CATEGORIE } from "../../Api/Apis";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { TOPRATED } from "../Api/Api";
+import { TOPRATED } from "../Api/Apis";
 import ShowTopRated from "./TopRated/ShowTopRated";
 import { Axios } from "../Api/Axios";
 import LoadingPage from "../components/Loading/loading";
@@ -11,10 +11,9 @@ export default function RelatedItem() {
   const [limit, setLimit] = useState(4);
 
   useEffect(() => {
-    Axios.get(`${TOPRATED}?limit=${limit}`)
-      .then((res) => {
-        console.log((res.data.length = 4), setPtoducts(res.data));
-      })
+    Axios.get(`${TOPRATED}?limit=${limit}`).then((res) => {
+      console.log((res.data.length = 4), setPtoducts(res.data));
+    });
   }, []);
 
   const showProduct = products.map((product) => (
@@ -33,7 +32,7 @@ export default function RelatedItem() {
 
   return (
     <>
-      <Container className="mt-5 " >
+      <Container className="mt-5 ">
         <h5 className="section-title text-danger">Related Item</h5>
         <div
           className="d-flex flex-wrap justify-content-start align-items-center last "
@@ -41,8 +40,7 @@ export default function RelatedItem() {
         >
           {showProduct}
         </div>
-        <div className="buttom mt-5 d-flex align-items-center justify-content-center">
-        </div>
+        <div className="buttom mt-5 d-flex align-items-center justify-content-center"></div>
       </Container>
     </>
   );

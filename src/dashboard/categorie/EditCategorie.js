@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
-import { CATEGORY } from "../../Api/Api";
+import { CATEGORY } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
@@ -29,9 +29,10 @@ export default function AddCategorie() {
     Axios.get(`${CATEGORY}/${id}`)
       .then((res) => setTitle(res.data.title))
       .then(() => {
-        setLoading(false)
-        setDisable(false)
-      }).catch(() => navigate('/dashboard/category/page/404', {replace: true}));
+        setLoading(false);
+        setDisable(false);
+      })
+      .catch(() => navigate("/dashboard/category/page/404", { replace: true }));
   }, []);
 
   //handle send form
@@ -101,7 +102,11 @@ export default function AddCategorie() {
               />
             </div>
 
-            <button disabled={disable} className="btn btn-danger px-4 py-2 w-100" type="submit">
+            <button
+              disabled={disable}
+              className="btn btn-danger px-4 py-2 w-100"
+              type="submit"
+            >
               Save Change
             </button>
           </Form>

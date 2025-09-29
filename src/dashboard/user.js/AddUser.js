@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
-import { USER } from "../../Api/Api";
+import { USER } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,7 +52,6 @@ export default function AddUser() {
       setLoading(false);
     }
   }
-
 
   return (
     <>

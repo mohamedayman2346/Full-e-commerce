@@ -4,7 +4,7 @@ import { Bars } from "../../Context/IsOpen";
 import { useContext, useEffect, useState } from "react";
 import { WindowSizeContext } from "../../Context/WindowSize";
 import { Axios } from "../../Api/Axios";
-import { USER } from "../../Api/Api";
+import { USER } from "../../Api/Apis";
 import { Links } from "./SidebarLink";
 
 export default function Sidebar() {

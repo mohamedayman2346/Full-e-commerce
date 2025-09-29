@@ -3,7 +3,7 @@ import TableShow from "../../components/table/Table";
 import { Axios } from "../../Api/Axios";
 import LoadingPage from "../../components/Loading/loading";
 import { Link } from "react-router-dom";
-import { PRODUCT, PRODUCTS } from "../../Api/Api";
+import { PRODUCT, PRODUCTS } from "../../Api/Apis";
 
 export default function Products() {
   const [products, setProducts] = useState([]);

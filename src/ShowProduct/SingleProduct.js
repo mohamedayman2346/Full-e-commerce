@@ -2,7 +2,7 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import { Container, Form } from "react-bootstrap";
 import { useContext, useEffect, useState } from "react";
 import { Axios } from "../Api/Axios";
-import { CART, PRODUCT } from "../Api/Api";
+import { CART, PRODUCT } from "../Api/Apis";
 import LoadingPage from "../components/Loading/loading";
 import ImageGallery from "react-image-gallery";
 import {
@@ -51,7 +51,7 @@ export default function SingleProduct() {
         );
       })
       .catch((rej) => console.log(rej))
-    .finally(() => setLoading(false));
+      .finally(() => setLoading(false));
   }, [id]);
 
   //  check product in local or not
@@ -120,7 +120,7 @@ export default function SingleProduct() {
         </div>
         <div className="product-info row justify-content-evenly">
           {/* show product image */}
-          <div className="col-12 col-md-7 col-lg-5 animate__animated animate__fadeInUp" >
+          <div className="col-12 col-md-7 col-lg-5 animate__animated animate__fadeInUp">
             <ImageGallery items={productImage} />
           </div>
           <div className="col-12 col-md-5 col-lg-6 animate__animated animate__fadeInUp">

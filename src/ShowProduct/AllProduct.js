@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import LoadingPage from "../components/Loading/loading";
 import { Axios } from "../Api/Axios";
-import { PRODUCTS } from "../Api/Api";
+import { PRODUCTS } from "../Api/Apis";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container } from "react-bootstrap";
 import ShowTopRated from "./TopRated/ShowTopRated";
@@ -36,16 +36,16 @@ export default function AllProoduct() {
 
   const showProduct = products?.map((product) => (
     <ShowTopRated
-          title={product.title}
-          rating={product.rating}
-          id={product.id}
-          image={product.images[0].image}
-          price={product.price}
-          discount={product.discount}
-          col={4}
-          stock={product.stock}
-          product={product}
-        />
+      title={product.title}
+      rating={product.rating}
+      id={product.id}
+      image={product.images[0].image}
+      price={product.price}
+      discount={product.discount}
+      col={4}
+      stock={product.stock}
+      product={product}
+    />
   ));
 
   return (

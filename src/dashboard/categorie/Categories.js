@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TableShow from "../../components/table/Table";
-import { CATEGORIE, CATEGORY } from "../../Api/Api";
+import { CATEGORIE, CATEGORY } from "../../Api/Apis";
 import { Axios } from "../../Api/Axios";
 import LoadingPage from "../../components/Loading/loading";
 import { Link } from "react-router-dom";
@@ -31,7 +31,7 @@ export default function Categories() {
       })
       .catch((rej) => console.log(rej));
   }, [limit, page]);
-  
+
   // delete user
   async function handleDelete(id) {
     try {
@@ -47,11 +47,13 @@ export default function Categories() {
       {loading && <LoadingPage />}
       <div className="w-100">
         {/* page title */}
-       <div className="d-flex justify-content-between align-items-center">
-         <h1 className="text-center mb-3">All Categories</h1>
-         <Link to = '/dashboard/category/add' className = 'btn btn-primary'>Add Categories</Link>
-       </div>
-    {/* table */}
+        <div className="d-flex justify-content-between align-items-center">
+          <h1 className="text-center mb-3">All Categories</h1>
+          <Link to="/dashboard/category/add" className="btn btn-primary">
+            Add Categories
+          </Link>
+        </div>
+        {/* table */}
         <TableShow
           data={Categories}
           header={header}
@@ -62,7 +64,7 @@ export default function Categories() {
           limit={limit}
           setLimit={setLimit}
           total={total}
-          search='title'
+          search="title"
           searchLink={CATEGORY}
         />
       </div>

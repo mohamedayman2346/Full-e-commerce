@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { baseURL, USER } from "../../Api/Api";
+import { baseURL, USER } from "../../Api/Apis";
 import { Axios } from "../../Api/Axios";
 import LoadingPage from "../../components/Loading/loading";
 import { NavLink } from "react-router-dom";
@@ -30,8 +30,8 @@ export default function Profile() {
     setLoading(true);
     Axios.get(`/${USER}`)
       .then((res) => {
-        setFristName(res.data.name.split(' ').slice(0,1));
-        setLastName(res.data.name.split(' ').slice(1));
+        setFristName(res.data.name.split(" ").slice(0, 1));
+        setLastName(res.data.name.split(" ").slice(1));
         setEmail(res.data.email);
         setId(res.data.id);
         // setLastName(res.data)
@@ -42,16 +42,16 @@ export default function Profile() {
   }, []);
 
   async function handleSubmit(e) {
-    setLoading(true)
+    setLoading(true);
     e.preventDefault();
-    try{
-        await axios.post(`${baseURL}/${USER}/edit/${id}`,{
+    try {
+      await axios.post(`${baseURL}/${USER}/edit/${id}`, {
         name: fristName + lastName,
         email: email,
-      })
-    } catch(err) {
+      });
+    } catch (err) {
       console.log(err);
-    } finally{
+    } finally {
       setLoading(false);
     }
   }

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Axios } from "../../Api/Axios";
-import { CATEGORIE } from "../../Api/Api";
+import { CATEGORIE } from "../../Api/Apis";
 import { Container } from "react-bootstrap";
 import SkeletonShow from "../../components/Skeleton/Skeleton";
 

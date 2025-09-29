@@ -21,7 +21,7 @@ import "./navbar.css";
 import Cookie from "universal-cookie";
 import { useContext, useEffect, useState } from "react";
 import { Bars } from "../../Context/IsOpen";
-import { LOGOUT, USER } from "../../Api/Api";
+import { LOGOUT, USER } from "../../Api/Apis";
 import { Axios } from "../../Api/Axios";
 
 export default function NavControll() {
@@ -58,9 +58,9 @@ export default function NavControll() {
   //handle LogOut
   async function handleLogOut() {
     try {
-      await Axios.get(`${LOGOUT}`)
+      await Axios.get(`${LOGOUT}`);
       cookie.remove("ecommerce");
-      window.location.pathname('/');
+      window.location.pathname("/");
     } catch (err) {
       console.log(err);
     }

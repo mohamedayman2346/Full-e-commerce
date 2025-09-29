@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import TableShow from "../../components/table/Table";
-import { USER, USERS } from "../../Api/Api";
+import { USER, USERS } from "../../Api/Apis";
 import { Axios } from "../../Api/Axios";
 import LoadingPage from "../../components/Loading/loading";
 import { Link } from "react-router-dom";
@@ -27,11 +27,11 @@ export default function Users() {
     Axios.get(`/${USERS}?limit=${limit}&page=${page}`)
       .then((res) => {
         setUsers(res.data.data);
-        setTotal(res.data.total)
+        setTotal(res.data.total);
         setLoading(false);
       })
       .catch((rej) => console.log(rej));
-  }, [page,limit]);
+  }, [page, limit]);
 
   // get current user
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Users() {
       })
       .catch((rej) => console.log(rej));
   }, []);
-  
+
   // delete user
   async function handleDelete(id) {
     try {
@@ -75,7 +75,7 @@ export default function Users() {
           limit={limit}
           setLimit={setLimit}
           total={total}
-          search='name'
+          search="name"
           searchLink={USER}
         />
       </div>

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
-import { CATEGORIE, PRODUCT } from "../../Api/Api";
+import { CATEGORIE, PRODUCT } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
@@ -106,7 +106,10 @@ export default function AddProduct() {
             const percent = Math.trunc((loaded * 100) / total);
             if (percent % 4 === 0) {
               progress.current[j.current].style.width = `${percent}%`;
-              progress.current[j.current].setAttribute("percent", `${percent}%`);
+              progress.current[j.current].setAttribute(
+                "percent",
+                `${percent}%`
+              );
             }
           },
         });
@@ -120,12 +123,12 @@ export default function AddProduct() {
   // Delete Image
   async function handleDeleteImage(img, id) {
     const findID = ids.current[id];
-    try{
+    try {
       await Axios.delete(`product-img/${findID}`);
-      setImages(prev => prev.filter(item => item !== img ));
+      setImages((prev) => prev.filter((item) => item !== img));
       ids.current = ids.current.filter((id) => id !== findID);
       --j.current;
-    } catch(err){
+    } catch (err) {
       console.log(err);
     }
   }
@@ -157,13 +160,13 @@ export default function AddProduct() {
       </div>
     </div>
   ));
- 
 
   // category show
   const categoryShow = categories.map((item, key) => (
-    <option value = {item.id} key={key}>{item.title}</option>
+    <option value={item.id} key={key}>
+      {item.title}
+    </option>
   ));
- 
 
   return (
     <>

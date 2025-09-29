@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
-import { CATEGORIE, PRODUCT } from "../../Api/Api";
+import { CATEGORIE, PRODUCT } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
@@ -181,7 +181,9 @@ export default function EditProduct() {
 
   // category show
   const categoryShow = categories.map((item, key) => (
-    <option value = {item.id} key={key}>{item.title}</option>
+    <option value={item.id} key={key}>
+      {item.title}
+    </option>
   ));
 
   return (

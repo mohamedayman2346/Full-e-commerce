@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CATEGORIE, PRODUCTS, USER, USERS } from "../Api/Api";
+import { CATEGORIE, PRODUCTS, USER, USERS } from "../Api/Apis";
 import { Axios } from "../Api/Axios";
 import LoadingPage from "../components/Loading/loading";
 
@@ -35,25 +35,25 @@ export default function DashboardPage() {
       .catch((rej) => console.log(rej));
   }, []);
 
-   //get user data
-    useEffect(() => {
-      setLoading(true);
-      Axios.get(`/${USER}`)
-        .then((res) => {
-        setUser(res.data)
-        })
-        .catch((rej) => console.log(rej))
-        .finally(setLoading(false));
-    }, []);
+  //get user data
+  useEffect(() => {
+    setLoading(true);
+    Axios.get(`/${USER}`)
+      .then((res) => {
+        setUser(res.data);
+      })
+      .catch((rej) => console.log(rej))
+      .finally(setLoading(false));
+  }, []);
 
   return (
     <>
       {loading && <LoadingPage />}
       <div className="dashboard w-100 shadow-lg me-3 mb-3 p-4">
-          <div className="animate__animated animate__fadeInUp text-center my-5 py-5">
-            <h1>Welcome to the Dashboard Page </h1>
-            <p>Welcome {user.name}</p>
-          </div>
+        <div className="animate__animated animate__fadeInUp text-center my-5 py-5">
+          <h1>Welcome to the Dashboard Page </h1>
+          <p>Welcome {user.name}</p>
+        </div>
         <div className="table d-flex text-center justify-content-center align-items-center flex-wrap gap-5 mt-5">
           <div className="dashboard-card ">
             <h1>Users</h1>

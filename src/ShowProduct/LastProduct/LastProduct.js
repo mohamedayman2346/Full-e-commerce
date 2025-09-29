@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LATEST } from "../../Api/Api";
+import { LATEST } from "../../Api/Apis";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
 import ShowLastProduct from "./ShowLastProduct";
@@ -41,7 +41,7 @@ export default function LastProduct() {
         <h5 className="section-title text-danger">Today</h5>
         <div className="d-flex flex-wrap justify-content-between align-items-center mb-4">
           <h1>Lash Sales</h1>
-          <DateShow position = 'upper' />
+          <DateShow position="upper" />
           <div className="arrow d-flex gap-2">
             <FontAwesomeIcon
               icon={faArrowLeft}

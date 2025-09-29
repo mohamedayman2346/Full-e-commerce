@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
-import { CATEGORY } from "../../Api/Api";
+import { CATEGORY } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
@@ -8,25 +8,24 @@ import { Axios } from "../../Api/Axios";
 export default function AddCategorie() {
   const [loading, setLoading] = useState(false);
 
-  const [title, setTitle] = useState('');
-  const [image, setImage] = useState('');
- 
+  const [title, setTitle] = useState("");
+  const [image, setImage] = useState("");
+
   // focus
   const focus = useRef("");
-  const click = useRef('');
+  const click = useRef("");
   // handel foucs
   useEffect(() => {
     focus.current.focus();
   }, []);
 
- 
   //handle send form
   async function handleSubmit(e) {
     setLoading(true);
     e.preventDefault();
     const form = new FormData();
-    form.append('title', title);
-    form.append('image', image);
+    form.append("title", title);
+    form.append("image", image);
     // send the form data to the server
     try {
       await Axios.post(`${CATEGORY}/add`, form);
@@ -37,7 +36,6 @@ export default function AddCategorie() {
       setLoading(false);
     }
   }
-
 
   return (
     <>
@@ -57,7 +55,7 @@ export default function AddCategorie() {
             >
               <Form.Control
                 type="text"
-                required 
+                required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 ref={focus}
@@ -74,14 +72,19 @@ export default function AddCategorie() {
               <Form.Control
                 type="file"
                 required
-                style={{display: 'none'}}
+                style={{ display: "none" }}
                 onChange={(e) => setImage(e.target.files.item(0))}
                 ref={click}
               />
             </Form.Group>
-                <div className = 'drop-img d-flex justify-content-center mb-5 align-items-center w-100'>
-                    <img src = {require('../../Access/images/upload.png')} onClick={() => click.current.click()} width={'150px'} alt = 'cloud' />
-                </div>
+            <div className="drop-img d-flex justify-content-center mb-5 align-items-center w-100">
+              <img
+                src={require("../../Access/images/upload.png")}
+                onClick={() => click.current.click()}
+                width={"150px"}
+                alt="cloud"
+              />
+            </div>
 
             <button className="btn btn-danger px-4 py-2 w-100" type="submit">
               Add Categorie

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { WindowSizeContext } from "../../Context/WindowSize";
 import Form from "react-bootstrap/Form";
-import { baseURL } from "../../Api/Api";
+import { baseURL } from "../../Api/Apis";
 import axios from "axios";
 import "../../components/CSS/alert.css";
 import "../../components/CSS/Google.css";
@@ -91,7 +91,7 @@ export default function Bank() {
                 name="cvc"
                 value={form.cvc}
                 onChange={handleForm}
-                maxLength='3'
+                maxLength="3"
                 pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"
                 required
               />

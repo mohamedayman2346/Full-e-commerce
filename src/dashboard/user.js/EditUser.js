@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Form from "react-bootstrap/Form";
-import { USER } from "../../Api/Api";
+import { USER } from "../../Api/Apis";
 import "../../components/CSS/alert.css";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";

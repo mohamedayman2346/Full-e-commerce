@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { LATESTSALE } from "../../Api/Api";
+import { LATESTSALE } from "../../Api/Apis";
 import LoadingPage from "../../components/Loading/loading";
 import { Axios } from "../../Api/Axios";
 import { Container } from "react-bootstrap";
@@ -45,7 +45,7 @@ export default function LastSaleProduct() {
               className="px-5 py-3 nav-link rounded bg-danger text-center text-white-50"
               style={{ width: "230px" }}
             >
-              View All 
+              View All
             </Link>
           </div>
         </div>

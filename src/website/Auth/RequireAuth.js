@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Cookie from "universal-cookie";
 import { Axios } from "../../Api/Axios";
-import { USER } from "../../Api/Api";
+import { USER } from "../../Api/Apis";
 import { Navigate, Outlet, useNavigate } from "react-router-dom";
 import LoadingPage from "../../components/Loading/loading";
 import Err403 from "./Error/Err403";
