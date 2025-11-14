@@ -89,12 +89,12 @@ export default function Register() {
               src={require("../../Access/images/Auth.png")}
               alt="login"
               style={{ maxWidth: width > 1200 ? "700px" : "500px" }}
-              className=" animate__animated animate__fadeInUp animate__delay-1s"
+             
             />
           </div>
         )}
 
-        <div className="me-5  animate__animated animate__fadeInUp">
+        <div className="me-5  ">
           <div className="mb-5">
             <h1>Create An Account</h1>
             <p>Enter your details below</p>

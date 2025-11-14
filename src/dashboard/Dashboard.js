@@ -49,7 +49,7 @@ export default function DashboardPage() {
   return (
     <>
       {loading && <LoadingPage />}
-      <div className="dashboard w-100 shadow-lg me-3 mb-3 p-4">
+      <div className="dashboard w-100 shadow-lg me-3 mb-3 p-4" >
         <div className="animate__animated animate__fadeInUp text-center my-5 py-5">
           <h1>Welcome to the Dashboard Page </h1>
           <p>Welcome {user.name}</p>

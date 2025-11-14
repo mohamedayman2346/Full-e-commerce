@@ -2,6 +2,10 @@
 .last {
     overflow-x: scroll;
     overflow-y: hidden;
+    /* -webkit-overflow-scrolling: hidden; */
+    scrollbar-width:none;
+    
+    
 }
 .section-title{
     position: relative;
